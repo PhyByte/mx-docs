@@ -64,33 +64,26 @@ const sdks = [
     icon: "🔷",
   },
 ]
-const Builder = () => {
-  const [activePath, setActivePath] = useState(0);
-
+function Builder() {
   return (
     <Layout title="Builder" description="Learn how to build on MultiversX.">
       <PageHeader
         title="Builders Journeys"
         subtitle="Choose your path you must."
       />
-      <PageSection title="Builder Paths">
-        {[
-          { name: "Starting", content: "This is the starting point for your builders journey." },
-          { name: "Building", content: "This is where you will learn how to build on MultiversX." },
-          { name: "Deploying", content: "This is where you will learn how to deploy your project to MultiversX." },
-        ].map((path, idx) => (
-          <QuickLink key={idx} name={path.name} onClick={() => setActivePath(idx)} />
-        ))}
+        <PageSection title="Builder Paths">
+        {BuilderList.map((props, idx) => (
+              <QuickLink key={idx} {...props} />
+            ))}
       </PageSection>
       <PageSection title="SDKs">
-        {[
-          { name: "MultiversX SDK", content: "This is where you will learn how to use the MultiversX SDK." },
-        ].map((sdk, idx) => (
-          <QuickLink key={idx} name={sdk.name} onClick={() => setActivePath(idx)} />
-        ))}
+        {sdks.map((props, idx) => (
+              <QuickLink key={idx} {...props} />
+            ))}
       </PageSection>
+      
     </Layout>
   );
-};
+}
 
 export default Builder;
