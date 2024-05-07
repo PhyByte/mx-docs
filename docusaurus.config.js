@@ -94,23 +94,23 @@ const config = {
         },
         items: [
           {
-            href: "/developers/overview",
-            label: "Develop",
+            href: "/learn",
+            label: "Learn",
             position: "left",
           },
           {
-            href: "/validators/overview",
-            label: "Validate",
+            href: "/builder",
+            label: "Builders",
+            position: "left",
+          },
+          {
+            href: "/validator",
+            label: "Validators",
             position: "left",
           },
           {
             href: "/integrators/overview",
             label: "Integrate",
-            position: "left",
-          },
-          {
-            href: "/technology/architecture-overview",
-            label: "Learn",
             position: "left",
           },
           {
